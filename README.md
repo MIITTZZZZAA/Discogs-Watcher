@@ -24,7 +24,7 @@ IDs are stored in **LocalStorage**, so your list persists between sessions.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone and install
 
