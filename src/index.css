@@ -1,0 +1,106 @@
+/* ---------- Reset minim & variabile ---------- */
+* { box-sizing: border-box; }
+
+:root{
+  --bg: #0f1115;
+  --bg-2: #151922;
+  --surface: #1b2029;
+  --surface-2: #202735;
+  --text: #e6edf3;
+  --muted: #a5b1bf;
+  --border: #2b3443;
+  --accent: #6aa8ff;
+  --danger: #ff7d7d;
+  --radius: 10px;
+}
+
+/* ---------- Layout de bază (fără flex pe <body>) ---------- */
+html, body, #root { height: 100%; width: 100%; }
+body{
+  margin: 0;
+  background:
+    radial-gradient(1000px 600px at 20% -10%, rgba(106,168,255,.12), transparent 60%),
+    radial-gradient(800px 500px at 100% 0%, rgba(106,168,255,.08), transparent 50%),
+    var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Tipografie ---------- */
+h1{ 
+  margin: 0 0 18px;
+  font-size: clamp(28px, 5vw, 44px);
+  letter-spacing: .3px;
+  text-align: center;
+}
+p{ margin: 0; }
+
+/* ---------- Linkuri ---------- */
+a{
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover{ text-decoration: underline; }
+
+/* ---------- Form controls ---------- */
+input{
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+}
+input::placeholder{ color: #8693a3; }
+
+/* ---------- Butoane (afectează <button> fără clase) ---------- */
+button{
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, transform .02s ease;
+}
+button:hover{ background: #263142; border-color: #344354; }
+button:active{ transform: translateY(1px); }
+button:disabled{ opacity: .6; cursor: not-allowed; }
+
+/* ---------- Panou / card generic (dacă vrei să-l folosești) ---------- */
+.panel{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.35);
+  padding: 24px;
+}
+
+/* ---------- Tabel ---------- */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  font-size: 15px;
+}
+thead tr{
+  background: var(--bg-2);
+}
+th, td{
+  padding: 10px 8px;
+  text-align: left;
+}
+th{
+  color: #c7d2df;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+}
+tbody tr{
+  border-top: 1px solid var(--border);
+}
+tbody tr:nth-child(odd){
+  bac
